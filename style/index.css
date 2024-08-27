@@ -17,7 +17,7 @@ html {
   font-size: 62.5%;
 }
 
-.header {
+body {
   background-image: url("../images/body-bg-image.jpg");
   background-size: cover;
   background-position: center;
@@ -29,7 +29,7 @@ html {
 }
 
 .menu {
-  margin-left: 50rem;
+  margin: 0 auto;
 }
 
 a {
@@ -42,11 +42,193 @@ a {
   margin: 0 auto;
 }
 
-.menu ul li a {
+.menu li a {
   padding-top: 20px;
   font-size: 20px;
   color: #fff;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
+}
+
+.navigation {
+  margin-top: 10rem;
+  margin-right: 20rem;
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.nav-content h1 {
+  color: #fff;
+  font-size: 6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.nav-content p {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 4rem;
+}
+
+.navigation img {
+  max-width: 20rem;
+  border-radius: 50%;
+  max-height: 20rem;
+}
+
+.p {
+  display: flex;
+  column-gap: 0.8rem;
+}
+
+/* Menyu elementlari asosiy uslubi */
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  /* Text rangi */
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover animatsiyasi uchun */
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #3498db;
+  /* Animatsion chiziq rangi */
+  transition: width 0.4s ease-in-out;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+/* Hover holatidagi text rangi */
+
+.menu-link:hover {
+  color: #fff;
+}
+
+/* .wrap {
+  width: 100%;
+} */
+
+.gradient-text {
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 36, 1) 0%,
+    rgba(121, 9, 9, 1) 50%,
+    rgba(0, 254, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-content h1 {
+    font-size: 5rem;
+  }
+  .nav-content p {
+    font-size: 3rem;
+  }
+  .navigation {
+    margin-right: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-wrap: wrap;
+  }
+  .menu-link {
+    font-size: 1.8rem;
+    padding: 8px 16px;
+  }
+  .navigation {
+    flex-direction: column;
+    margin-right: 0;
+    margin-top: 5rem;
+    align-items: center;
+  }
+  .navigation img {
+    max-width: 15rem;
+    max-height: 15rem;
+  }
+  .nav-content h1 {
+    font-size: 4rem;
+  }
+  .nav-content p {
+    font-size: 2.5rem;
+  }
+  .gradient-text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-link {
+    font-size: 1.6rem;
+    padding: 5px 10px;
+  }
+  .navigation {
+    margin-top: 3rem;
+  }
+  .navigation img {
+    max-width: 12rem;
+    max-height: 12rem;
+  }
+  .nav-content h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .nav-content p {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .gradient-text {
+    font-size: 4.5rem;
+  }
 }
